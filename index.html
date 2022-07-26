@@ -33,7 +33,7 @@
 window.addEventListener("DOMContentLoaded",()=>{
   const rating = ()=>{
     const containers = document.getElementsByClassName("container");
-    containers.array.forEach(element => {
+    [...containers].forEach(element => {
       let rating = element.getAttribute("data-rat");
       element.children[0].style.width = rating+"%";
     });

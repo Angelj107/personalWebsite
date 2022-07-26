@@ -274,10 +274,29 @@ footer {
 
 .container{
   height: 50px;
-  width: 100%;
+  width: clamp(50px,100%,300px);
   border: 2px solid black;
+  position: relative;
+  border-radius: 2em;
+  margin: 0.8rem 0.1rem;
+  overflow: hidden;
 }
 .ratingVal{
   background-color: gold;
   width: 0;
+  height: 100%;
+}
+.container p{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1em;
+}
+#skills{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: baseline;
 }
