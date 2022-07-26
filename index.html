@@ -31,13 +31,11 @@
 })
 })
 window.addEventListener("DOMContentLoaded",()=>{
-  const rating = ()=>{
     const containers = document.getElementsByClassName("container");
     [...containers].forEach(element => {
       let rating = element.getAttribute("data-rat");
       element.children[0].style.width = rating+"%";
     });
-  }
 })
 </script>
   </head>
@@ -146,9 +144,23 @@ window.addEventListener("DOMContentLoaded",()=>{
       </div>
       </div>
       <div id="skills" class="section">
-        <div class="container" data-rat="100"><div class="ratingVal"></div><p>HTML</p></div>
-        <div class="container" data-rat="80"><div class="ratingVal"></div><p>HTML</p></div>
-        <div class="container" data-rat="10"><div class="ratingVal"></div><p>HTML</p></div>
+        <h1 class="sectionTitle">Programming Language Skills</h1>
+        <div class="container" data-rat="90"><div class="ratingVal"></div><p>HTML</p></div>
+        <div class="container" data-rat="80"><div class="ratingVal"></div><p>CSS</p></div>
+        <div class="container" data-rat="75"><div class="ratingVal"></div><p>Javascript</p></div>
+        <div class="container" data-rat="80"><div class="ratingVal"></div><p>PHP</p></div>
+        <div class="container" data-rat="50"><div class="ratingVal"></div><p>Python</p></div>
+        <div class="container" data-rat="30"><div class="ratingVal"></div><p>C++</p></div>
+        <div class="container" data-rat="40"><div class="ratingVal"></div><p>C#</p></div>
+        <div class="container" data-rat="80"><div class="ratingVal"></div><p>SQL</p></div>
+        <div class="container" data-rat="35"><div class="ratingVal"></div><p>React Native</p></div>
+        <h1 class="sectionTitle">Softwares I Know</h1>
+        <svg data-src="src/photoshop.svg" fill="black" title="photosohp"></svg>
+        <svg data-src="src/illustrator.svg" fill="black" title="illustrator"></svg>
+        <svg data-src="src/blender.svg" fill="black" title="blender"></svg>
+        <svg data-src="src/premierePro.svg" fill="black" title="premierePro"></svg>
+        <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
+        <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
 
       </div>
       <div id="music">
