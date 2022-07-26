@@ -30,6 +30,15 @@
   backgroundAlpha: 0.00
 })
 })
+window.addEventListener("DOMContentLoaded",()=>{
+  const rating = ()=>{
+    const containers = document.getElementsByClassName("container");
+    containers.array.forEach(element => {
+      let rating = element.getAttribute("data-rat");
+      element.children[0].style.width = rating+"%";
+    });
+  }
+})
 </script>
   </head>
   <body>
@@ -136,9 +145,19 @@
           </div>
       </div>
       </div>
+      <div id="skills" class="section">
+        <div class="container" data-rat="100"><div class="ratingVal"></div><p>HTML</p></div>
+        <div class="container" data-rat="80"><div class="ratingVal"></div><p>HTML</p></div>
+        <div class="container" data-rat="10"><div class="ratingVal"></div><p>HTML</p></div>
+
+      </div>
       <div id="music">
           <h1 class="sectionTitle">Music Production</h1>
-          Here you can find some of my humble compositions. Hope you enjoy them!
+          <p>Started playing piano at the age of 14, since then I've been in love with music, whether it's listening to it or playing it. <br>
+            I can also strum some chords on guitar as a self-taught! Let's say that I can entertain a bit during beach bonfires! But don't give a microphone if you don't wanna recieve an headache!
+            <br>
+            Since my practice sessions were drastically reduced during university years, I focused more on composing, trying to convey what's in my head in the sounds and 
+            here you can find some of my humble compositions. Hope you enjoy them!</p>
       </div>
       <footer>Source code on GitHub!</footer>
   </body>

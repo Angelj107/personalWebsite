@@ -2,14 +2,17 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 html {
   scroll-behavior: smooth;
-  font-size:clamp(10px,100%,16px);
+  font-size: clamp(10px, 100%, 16px);
 }
+
 body {
   background-color: #0f2234fa;
   font-family: 'Ubuntu', sans-serif;
 }
+
 nav {
   background-color: #00000082;
   padding: 0.7em;
@@ -18,11 +21,12 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  font-size:1.5rem;
- box-shadow: #8b379173 -2px 7px 20px 6px;
- border-bottom-left-radius:1em;
- border-bottom-right-radius:1em;
+  font-size: 1.5rem;
+  box-shadow: #8b379173 -2px 7px 20px 6px;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
+
 nav a {
   margin-top: 1.3rem;
   color: white;
@@ -30,21 +34,21 @@ nav a {
   font-size: 1.5rem;
   text-transform: uppercase;
   transition: text-decoration-offset 100ms;
-  background: linear-gradient(
-    to right,
-    rgba(100, 200, 200, 0),
-    rgba(100, 200, 200, 1)
-  );
+  background: linear-gradient(to right,
+      rgba(100, 200, 200, 0),
+      rgba(100, 200, 200, 1));
   background-size: 0 0.1em;
   background-position: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 300ms;
 
 }
+
 nav a:hover {
   background-size: 100% 0.1em;
 }
-.entryPoint{
+
+.entryPoint {
   height: 100vh;
   width: 100vw;
 }
@@ -61,7 +65,8 @@ nav a:hover {
   margin-right: auto;
   position: absolute;
 }
-.dropPage{
+
+.dropPage {
   position: absolute;
   left: 0;
   right: 0;
@@ -74,9 +79,10 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: clamp(50%,100%,300px);
+  width: clamp(50%, 100%, 300px);
 }
-.profile{
+
+.profile {
   text-align: center;
   display: block;
   font-size: 2rem;
@@ -84,62 +90,67 @@ nav a:hover {
   padding: 0.5em;
   width: 75%;
 }
-.profile img{
+
+.profile img {
 
   width: 50%;
   aspect-ratio: 1;
   border-radius: 100%;
   border: 3px solid rgba(237, 176, 5, 0.998);
 }
+
 .profile p {
   background-color: rgba(255, 255, 255, 0.64);
   border-radius: 3em;
   padding: 0.2em;
-  font-size: clamp(1rem,23px,2rem)
-
+  font-size: clamp(1rem, 23px, 2rem)
 }
 
 #tltwb {
-  width: clamp(10px,100%,660px);
+  width: clamp(10px, 100%, 660px);
   animation-name: animate;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transition: fill 3000ms;
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%)
 }
+
 #tltwb:hover,
 #tltwb:focus {
   fill: rgba(223, 165, 8, 0.716);
 }
-#tltwb:hover + .tltwbText {
+
+#tltwb:hover+.tltwbText {
   color: rgba(237, 176, 5, 0.998);
 }
+
 @keyframes animate {
   0% {
-    filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff)
-      drop-shadow(0px 0px 10px #ff80b3) drop-shadow(0px 0px 30px #ff4d94);
+    filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 10px #ff80b3) drop-shadow(0px 0px 30px #ff4d94);
   }
 
   100% {
-    filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff)
-      drop-shadow(0px 0px 15px #ff80b3) drop-shadow(0px 0px 40px #ff4d94);
+    filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff) drop-shadow(0px 0px 15px #ff80b3) drop-shadow(0px 0px 40px #ff4d94);
   }
 }
+
 @keyframes underLineEffect {
   0% {
     background-size: 0 0.1em;
   }
 
   50% {
-  background-size: 100% 0.1em;
+    background-size: 100% 0.1em;
   }
+
   100% {
-  background-size: 200% 0.1em;
+    background-size: 200% 0.1em;
   }
 }
+
 .tltwbText {
   text-transform: capitalize;
   font-size: 2rem;
@@ -149,6 +160,7 @@ nav a:hover {
   bottom: 5%;
   transition: color 3000ms;
 }
+
 .sectionTitle {
   font-size: 2.5rem;
   text-align: center;
@@ -158,22 +170,23 @@ nav a:hover {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-   background: linear-gradient(
-    to right,
-    rgba(100, 200, 200, 0),
-    rgba(100, 200, 200, 1)
-  );
+  background: linear-gradient(to right,
+      rgba(100, 200, 200, 0),
+      rgba(100, 200, 200, 1));
   background-size: 0 0.1em;
   background-position: 0% 100%;
   background-repeat: no-repeat;
 }
+
 #music {
   animation: fadein 2s;
 }
+
 @keyframes fadein {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -183,40 +196,48 @@ nav a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .cvElms svg {
-  width: clamp(25px,20%,50px);
-  height: clamp(25px,20%,50px);
+  width: clamp(25px, 20%, 50px);
+  height: clamp(25px, 20%, 50px);
   aspect-ratio: 1;
 }
-.job{
+
+.job {
   padding: 1.5em;
-  margin:0.5rem;
+  margin: 0.5rem;
   background-color: rgba(255, 255, 255, 0.491);
   backdrop-filter: blur(30px) saturate(180%) contrast(60%);
-  border-radius:2em;
+  border-radius: 2em;
 }
+
 .jobYears {
   font-size: 0.8rem;
 }
+
 .jobSociety {
   font-size: 1.1rem;
   font-weight: bold;
 
 }
+
 .jobTitle {
   font-size: 1rem;
 }
+
 .jobDescription {
   font-size: 0.8rem;
 }
+
 ul {
-  width: clamp(100px,100%,450px);
+  width: clamp(100px, 100%, 450px);
   list-style-type: none;
   margin: 0 auto;
   padding: 2em;
   display: block;
 }
-ul > li {
+
+ul>li {
   background-color: #fffa;
   backdrop-filter: blur(10px) saturate(160%) contrast(150%);
   padding: 0.5em;
@@ -224,18 +245,39 @@ ul > li {
   max-width: 250px;
   margin: 1.2em auto;
 }
-ul > li > a {
+
+ul>li>a {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 0.5em;
-    text-decoration: none;
+  text-decoration: none;
   color: black;
   font-weight: bold;
 }
-.section{
+
+.section {
   margin-bottom: 1em;
   padding: 0.5em;
   height: 100vh;
   color: white;
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: .3em;
+  color: #ffffff63;
+  font-size: 0.6rem;
+}
+
+.container{
+  height: 50px;
+  width: 100%;
+  border: 2px solid black;
+}
+.ratingVal{
+  background-color: gold;
+  width: 0;
 }
