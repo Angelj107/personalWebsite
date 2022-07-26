@@ -195,22 +195,18 @@ nav a:hover {
   backdrop-filter: blur(30px) saturate(180%) contrast(60%);
   border-radius:2em;
 }
-.jobYears,
-.studYears {
+.jobYears {
   font-size: 0.8rem;
 }
-.jobSociety,
-.studSociety {
+.jobSociety {
   font-size: 1.1rem;
   font-weight: bold;
 
 }
-.jobTitle,
-.studTitle {
+.jobTitle {
   font-size: 1rem;
 }
-.jobDescription,
-.studDescription {
+.jobDescription {
   font-size: 0.8rem;
 }
 ul {
