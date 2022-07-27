@@ -113,7 +113,7 @@
           <p class="jobTitle">Process Engineer</p>
           <p class="jobDescription">Preparation and issuing of technical documents needed for the PDP (Process Design
             Package) of Polypropylene plants
-            <span class="dots"><button onclick="showMore(0)" class="moreButton">...</button></span>
+           <button onclick="showMore(0)" class="moreButton">...</button>
             <span class="more">, such as:<br>
               <ul>
                 <li>Process Flow Diagrams (PFD)</li>
@@ -134,8 +134,8 @@
           <p class="jobYears">November 2018 - Current</p>
           <p class="jobSociety">Pharmatech SRL</p>
           <p class="jobTitle">Lyophilization Consultant</p>
-          <p class="jobDescription">SAT and training for Freeze Dryer equipments. <span class="dots"><button
-                onclick="showMore(1)" class="moreButton">...</button></span>
+          <p class="jobDescription">SAT and training for Freeze Dryer equipments.<button
+                onclick="showMore(1)" class="moreButton">...</button>
             <span class="more"><br>Some of my activities were done in:
               <ul>
                 <li>Sweden (Astrazeneca)</li>
@@ -235,7 +235,6 @@
   <footer>Source code on GitHub!</footer>
   <script>
     const showMore = (id) => {
-      var dots = document.getElementsByClassName("dots")[id];
       var moreText = document.getElementsByClassName("more")[id];
       var btnText = document.getElementsByClassName("moreButton")[id];
       if (dots.style.display == "none") {
