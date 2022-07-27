@@ -39,17 +39,20 @@
   </script>
 </head>
 
-<body>
+<body style="overflow:hidden;" scroll="no">
   <script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js" async></script>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#bio">Bio</a>
+    <a href="#cv">CV</a>
+    <a href="#music">Music</a>
+  </nav>
 
-
-  <div class="entryPoint">
-
+  <div class="entryPoint" id="home">
     <div class="logo-container">
       <svg data-src="src/tltwb.svg" fill="black" id="tltwb"></svg>
       <p class="tltwbText">To let the world be.</p>
     </div>
-
     <div class="dropPage">
       <div class="profile">
         <img src="src/ProfilePicture.png" alt="">
@@ -72,11 +75,7 @@
         </ul>
       </div>
     </div>
-    <nav>
-      <a href="#bio">Bio</a>
-      <a href="#cv">CV</a>
-      <a href="#music">Music</a>
-    </nav>
+ 
   </div>
   <div id="bio" class="section">
     <h1 class="sectionTitle">Biography</h1>
@@ -97,6 +96,7 @@
   </div>
   <div id="cv" class="section">
     <h1 class="sectionTitle">Curriculm Vitae</h1>
+    <a href="#skillsSection">Skills</a>
     <div class="cvElms">
       <div class="jobExpriences">
         <div class="job">
@@ -167,7 +167,7 @@
       </div>
     </div>
   </div>
-  <div class="section">
+  <div class="section" id="skillsSection">
     <h1 class="sectionTitle">Programming Language Skills</h1>
     <div id="skills">
       <div class="container" data-rat="90">
@@ -235,12 +235,12 @@
     const showMore = (id) => {
       var moreText = document.getElementsByClassName("more")[id];
       var btnText = document.getElementsByClassName("moreButton")[id];
-      if (moreText.style.display != "none") {
-        moreText.style.display = "none";
-        btnText.innerHTML = " ... ";
-      } else {
+      if (moreText.style.display != "inline") {
         moreText.style.display = "inline";
         btnText.innerHTML = " - ";
+      } else {
+        moreText.style.display = "none";
+        btnText.innerHTML = " ... ";
       }
     }
   </script>

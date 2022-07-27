@@ -26,6 +26,7 @@ nav {
   box-shadow: #8b379173 -2px 7px 20px 6px;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
+  display: fixed;
 }
 
 nav a {
