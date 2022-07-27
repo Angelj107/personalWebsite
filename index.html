@@ -113,9 +113,8 @@
           <p class="jobTitle">Process Engineer</p>
           <p class="jobDescription">Preparation and issuing of technical documents needed for the PDP (Process Design
             Package) of Polypropylene plants
-            <span class="dots"><button onclick="showMore()" class="moreButton">...</button></span>
-            <span class="more">, such as:
-              <br>
+            <span class="dots"><button onclick="showMore(0)" class="moreButton">...</button></span>
+            <span class="more">, such as:<br>
               <ul>
                 <li>Process Flow Diagrams (PFD)</li>
                 <li>Process and Instrumentation Diagrams (P&ID)</li>
@@ -136,8 +135,8 @@
           <p class="jobSociety">Pharmatech SRL</p>
           <p class="jobTitle">Lyophilization Consultant</p>
           <p class="jobDescription">SAT and training for Freeze Dryer equipments. <span class="dots"><button
-                onclick="showMore()" class="moreButton">...</button></span>
-            <span><br>Some of my activities were done in:
+                onclick="showMore(1)" class="moreButton">...</button></span>
+            <span class="more"><br>Some of my activities were done in:
               <ul>
                 <li>Sweden (Astrazeneca)</li>
                 <li>France (Sanofi)</li>
@@ -235,10 +234,10 @@
   </div>
   <footer>Source code on GitHub!</footer>
   <script>
-    const showMore = () => {
-      var dots = document.getElementsByClassName("dots");
-      var moreText = document.getElementsByClassName("more");
-      var btnText = document.getElementsByClassName("moreButton");
+    const showMore = (id) => {
+      var dots = document.getElementsByClassName("dots")[id];
+      var moreText = document.getElementsByClassName("more")[id];
+      var btnText = document.getElementsByClassName("moreButton")[id];
       if (dots.style.display == "none") {
         dots.style.display = "inline";
         moreText.style.display = "none";
