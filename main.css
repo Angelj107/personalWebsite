@@ -78,7 +78,8 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: clamp(50%, 100vmin, 300px);
+  width: clamp(50%, 100vw, 100%);
+  height: clamp(50%, 100vh, 100%);
   flex-wrap: wrap;
 }
 
@@ -86,13 +87,11 @@ nav a:hover {
   text-align: center;
   display: block;
   font-size: 2rem;
-  height: 100%;
   padding: 0.5em;
-  width: 75%;
+  max-width: 300px;
 }
 
 .profile img {
-
   width: 50%;
   aspect-ratio: 1;
   border-radius: 100%;
