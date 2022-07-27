@@ -305,3 +305,11 @@ footer {
 .more{
   display: none;
 }
+.moreButton{
+  display: inline;
+  border: 0;
+  background: transparent;
+  color: lawngreen;
+  cursor: pointer;
+  font-weight: bold;
+}
