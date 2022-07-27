@@ -3,9 +3,11 @@
   margin: 0;
   /* outline:1px red solid; */
 }
-
+html,body{
+  height: 100vh;
+  width: 100vw;
+}
 html {
-  scroll-behavior: smooth;
   font-size: clamp(10px, 100%, 16px);
 }
 
@@ -26,7 +28,9 @@ nav {
   box-shadow: #8b379173 -2px 7px 20px 6px;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
-  display: fixed;
+  position: fixed ;
+  z-index: 2;
+  top: 0;
 }
 
 nav a {
@@ -50,11 +54,11 @@ nav a:hover {
   background-size: 100% 0.1em;
 }
 
-.entryPoint {
-  height: 100vh;
+#pages{
   width: 100vw;
+  height: 100vh;
+  position: relative;
 }
-
 .logo-container {
   width: 100%;
   margin: auto;
@@ -63,9 +67,8 @@ nav a:hover {
   flex-direction: row;
   justify-content: center;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
+  position: relative;
+
 }
 
 .dropPage {
@@ -179,9 +182,7 @@ nav a:hover {
   background-repeat: no-repeat;
 }
 
-#music {
-  animation: fadein 2s;
-}
+
 
 @keyframes fadein {
   from {
@@ -258,17 +259,22 @@ nav a:hover {
 }
 
 .section {
-  margin-bottom: 1em;
   padding: 0.5em;
-  height: 100vh;
   color: white;
+  display: none;
+  animation: fadein 2s;
+  width: 100%;
+  height: 100%;
+}
+#home{
+  display: block;
 }
 
 footer {
   position: fixed;
   right: 0;
   bottom: 0;
-  padding: .3em;
+  padding: 0.3em;
   color: #ffffff63;
   font-size: 0.6rem;
 }
@@ -313,4 +319,59 @@ footer {
   color: lawngreen;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* Carousel Styling Here! Credits to @weSchool */
+
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    display: none;
+    max-width: 100vmin;
+    max-height: 100vmin;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    box-shadow: 0px 0px 20px 100vh #000000c7;
+}
+.closeSlideshow{
+  position: fixed;
+  right: 0;
+  font-weight: bold;
+  color: red;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+.mySlides1,.mySlides2{
+  background-color: grey;
 }
