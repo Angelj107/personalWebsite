@@ -112,38 +112,36 @@
           <p class="jobSociety">Startail SRL</p>
           <p class="jobTitle">Process Engineer</p>
           <p class="jobDescription">Preparation and issuing of technical documents needed for the PDP (Process Design
-            Package) of Polypropylene plants
-           <button onclick="showMore(0)" class="moreButton">...</button>
-            <span class="more">, such as:<br>
-              <ul>
-                <li>Process Flow Diagrams (PFD)</li>
-                <li>Process and Instrumentation Diagrams (P&ID)</li>
-                <li>Equipment Data Sheets</li>
-                <li>Instrument & Safety Devices Datasheets</li>
-                <li>Process and Interlock Descriptions</li>
-                <li>Operating Manual</li>
-                <li>Heat&Material Balance</li>
-                <li>Equipment & Line List</li>
-              </ul>
-              I had also experience in process Simulation through ASPEN HYSYS and in HAZOP activity.
-            </span>
-          </p>
+            Package) of Polypropylene plants</p>
+          <button onclick="showMore(0)" class="moreButton">...</button>
+          <div class="more">, such as:<br>
+            <ul>
+              <li>Process Flow Diagrams (PFD)</li>
+              <li>Process and Instrumentation Diagrams (P&ID)</li>
+              <li>Equipment Data Sheets</li>
+              <li>Instrument & Safety Devices Datasheets</li>
+              <li>Process and Interlock Descriptions</li>
+              <li>Operating Manual</li>
+              <li>Heat&Material Balance</li>
+              <li>Equipment & Line List</li>
+            </ul>
+            <p>I had also experience in process Simulation through ASPEN HYSYS and in HAZOP activity.</p>
+          </div>
         </div>
         <div class="job">
           <svg data-src="src/job.svg" fill="black" id="job"></svg>
           <p class="jobYears">November 2018 - Current</p>
           <p class="jobSociety">Pharmatech SRL</p>
           <p class="jobTitle">Lyophilization Consultant</p>
-          <p class="jobDescription">SAT and training for Freeze Dryer equipments.<button
-                onclick="showMore(1)" class="moreButton">...</button>
-            <span class="more"><br>Some of my activities were done in:
+          <p class="jobDescription">SAT and training for Freeze Dryer equipments.</p>
+            <button onclick="showMore(1)" class="moreButton">...</button>
+            <div class="more"><br>Some of my activities were done in:
               <ul>
                 <li>Sweden (Astrazeneca)</li>
                 <li>France (Sanofi)</li>
                 <li>UK (Pfizer)</li>
               </ul>
-            </span>
-          </p>
+            </div>
         </div>
       </div>
       <div class="studies" class="section">
@@ -237,13 +235,11 @@
     const showMore = (id) => {
       var moreText = document.getElementsByClassName("more")[id];
       var btnText = document.getElementsByClassName("moreButton")[id];
-      if (dots.style.display == "none") {
-        dots.style.display = "inline";
+      if (moreText.style.display != "none") {
         moreText.style.display = "none";
         btnText.innerHTML = " ... ";
       } else {
-        dots.style.display = "none";
-        moreText.style.display = "inline";
+        moreText.style.display = "none";
         btnText.innerHTML = " - ";
       }
     }
