@@ -229,7 +229,7 @@ nav a:hover {
   font-size: 0.8rem;
 }
 
-ul {
+.dropPage ul {
   width: clamp(100px, 100%, 450px);
   list-style-type: none;
   margin: 0 auto;
@@ -237,7 +237,7 @@ ul {
   display: block;
 }
 
-ul>li {
+.dropPage ul>li {
   background-color: #fffa;
   backdrop-filter: blur(10px) saturate(160%) contrast(150%);
   padding: 0.5em;
@@ -246,7 +246,7 @@ ul>li {
   margin: 1.2em auto;
 }
 
-ul>li>a {
+.dropPage ul>li>a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -301,4 +301,7 @@ footer {
   align-content: baseline;
   margin: auto;
   max-width: 1100px;
+}
+.more{
+  display: none;
 }

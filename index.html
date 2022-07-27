@@ -1,201 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AE_Ruggiero</title>
-    <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-    />
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AE_Ruggiero</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
   <script>
-    window.addEventListener("DOMContentLoaded", ()=> {VANTA.BIRDS({
-  el: ".entryPoint",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color1: 0xcfaa0f,
-  color2: 0xebd9d9,
-  birdSize: 0.6,
-  cohesion: 49.00,
-  quantity: 3.00,
-  backgroundAlpha: 0.00
-})
-})
-window.addEventListener("DOMContentLoaded",()=>{
-    const containers = document.getElementsByClassName("container");
-    [...containers].forEach(element => {
-      let rating = element.getAttribute("data-rat");
-      element.children[0].style.width = rating+"%";
-    });
-})
-</script>
-  </head>
-  <body>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
-      async
-    ></script>
+    window.addEventListener("DOMContentLoaded", () => {
+      VANTA.BIRDS({
+        el: ".entryPoint",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color1: 0xcfaa0f,
+        color2: 0xebd9d9,
+        birdSize: 0.6,
+        cohesion: 49.00,
+        quantity: 3.00,
+        backgroundAlpha: 0.00
+      })
+    })
+    window.addEventListener("DOMContentLoaded", () => {
+      const containers = document.getElementsByClassName("container");
+      [...containers].forEach(element => {
+        let rating = element.getAttribute("data-rat");
+        element.children[0].style.width = rating + "%";
+      });
+    })
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js" async></script>
 
 
-      <div class="entryPoint">
+  <div class="entryPoint">
 
-        <div class="logo-container">
-            <svg data-src="src/tltwb.svg" fill="black" id="tltwb"></svg>
-            <p class="tltwbText">To let the world be.</p>
-        </div>
+    <div class="logo-container">
+      <svg data-src="src/tltwb.svg" fill="black" id="tltwb"></svg>
+      <p class="tltwbText">To let the world be.</p>
+    </div>
 
-        <div class="dropPage">
-          <div class="profile">
-            <img src="src/ProfilePicture.png" alt="">
-            <p>@AE_RUGGIERO</p>
-          </div>
-          <div>
-            <ul>
-              <li><a href="https://www.instagram.com/ae_ruggiero/">
-                <img src="src/instagram.svg" alt="" width="20">Instagram</a>
-              </li>
-              <li><a href="https://www.youtube.com/channel/UC735lGZAlaVPLhS4iT3Q1vA/featured">
-                <img src="src/youtube.svg" alt="" width="20">You Tube</a>
-              </li>
-              <li><a href="https://www.linkedin.com/in/aeruggiero/">
-                <img src="src/linkedin.svg" alt="" width="20">Linkedin</a>
-              </li>
-              <li><a href="https://github.com/Angelj107">
-                <img src="src/github.svg" alt="" width="20">GitHub</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <nav>
-        <a href="#bio">Bio</a>
-        <a href="#cv">CV</a>
-        <a href="#music">Music</a>
-      </nav>
+    <div class="dropPage">
+      <div class="profile">
+        <img src="src/ProfilePicture.png" alt="">
+        <p>@AE_RUGGIERO</p>
       </div>
-      <div id="bio" class="section">
-          <h1 class="sectionTitle">Biography</h1>
-          <p>
-              Hi! My name is Angelo Emiliano Ruggiero, born and raised in a small city in Apulia, Italy.
+      <div>
+        <ul>
+          <li><a href="https://www.instagram.com/ae_ruggiero/">
+              <img src="src/instagram.svg" alt="" width="20">Instagram</a>
+          </li>
+          <li><a href="https://www.youtube.com/channel/UC735lGZAlaVPLhS4iT3Q1vA/featured">
+              <img src="src/youtube.svg" alt="" width="20">You Tube</a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/aeruggiero/">
+              <img src="src/linkedin.svg" alt="" width="20">Linkedin</a>
+          </li>
+          <li><a href="https://github.com/Angelj107">
+              <img src="src/github.svg" alt="" width="20">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav>
+      <a href="#bio">Bio</a>
+      <a href="#cv">CV</a>
+      <a href="#music">Music</a>
+    </nav>
+  </div>
+  <div id="bio" class="section">
+    <h1 class="sectionTitle">Biography</h1>
+    <p>
+      Hi! My name is Angelo Emiliano Ruggiero, born and raised in a small city in Apulia, Italy.
+      <br>
+      After completing my studies in High School, I moved to Turin to study Chemical Engineering, where I graduated in 5
+      years.
+      <br>
+      Then, a small parenthesis in a city near Pescara led me to the beginning of my working life.
+      <br>
+      As for now, I've come back to my hometown, where I'm currently working as a Chemical Engineer, but with a forever
+      growing passion in Computer Science and Music Production.
+      <br>
+      I welcome you to this little site in which I share some of my favorite activities and where you can learn more
+      about myself and my passions.
+    </p>
+  </div>
+  <div id="cv" class="section">
+    <h1 class="sectionTitle">Curriculm Vitae</h1>
+    <div class="cvElms">
+      <div class="jobExpriences">
+        <div class="job">
+          <svg data-src="src/job.svg" fill="black" id="job"></svg>
+          <p class="jobYears">January 2019 - October 2019</p>
+          <p class="jobSociety">Pic Solutions</p>
+          <p class="jobTitle">Validation Technician</p>
+          <p class="jobDescription">Validation of various pharmaceutical equipments. </p>
+        </div>
+        <div class="job">
+          <svg data-src="src/job.svg" fill="black" id="job"></svg>
+          <p class="jobYears">October 2019 - Current</p>
+          <p class="jobSociety">Startail SRL</p>
+          <p class="jobTitle">Process Engineer</p>
+          <p class="jobDescription">Preparation and issuing of technical documents needed for the PDP (Process Design
+            Package) of Polypropylene plants
+            <span class="dots"><button onclick="showMore()" class="moreButton">...</button></span>
+            <span class="more">, such as:
               <br>
-              After completing my studies in High School, I moved to Turin to study Chemical Engineering, where I graduated in 5 years.
-              <br>
-              Then, a small parenthesis in a city near Pescara led me to the beginning of my working life.
-              <br>
-              As for now, I've come back to my hometown, where I'm currently working as a Chemical Engineer, but with a forever growing passion in Computer Science and Music Production.
-              <br>
-              I welcome you to this little site in which I share some of my favorite activities and where you can learn more about myself and my passions.
+              <ul>
+                <li>Process Flow Diagrams (PFD)</li>
+                <li>Process and Instrumentation Diagrams (P&ID)</li>
+                <li>Equipment Data Sheets</li>
+                <li>Instrument & Safety Devices Datasheets</li>
+                <li>Process and Interlock Descriptions</li>
+                <li>Operating Manual</li>
+                <li>Heat&Material Balance</li>
+                <li>Equipment & Line List</li>
+              </ul>
+              I had also experience in process Simulation through ASPEN HYSYS and in HAZOP activity.
+            </span>
           </p>
-      </div>
-      <div id="cv" class="section">
-          <h1 class="sectionTitle">Curriculm Vitae</h1>
-      <div class="cvElms">
-          <div class="jobExpriences">
-              <div class="job">
-              <svg data-src="src/job.svg" fill="black" id="job"></svg>
-                  <p class="jobYears">January 2019 - October 2019</p>
-                  <p class="jobSociety">Pic Solutions</p>
-                  <p class="jobTitle">Validation Technician</p>
-                  <p class="jobDescription">Validation of various pharmaceutical equipments.  </p>
-                  </div>
-              <div class="job">
-              <svg data-src="src/job.svg" fill="black" id="job"></svg>
-                  <p class="jobYears">October 2019 - Current</p>
-                  <p class="jobSociety">Startail SRL</p>
-                  <p class="jobTitle">Process Engineer</p>
-                  <p class="jobDescription">Preparation and issuing of technical documents needed for the PDP (Process Design Package) of Polypropylene plants, such as:
-                    <br>
-                    <ul>
-                      <li>Process Flow Diagrams (PFD)</li>
-                      <li>Process and Instrumentation Diagrams (P&ID)</li>
-                      <li>Equipment Data Sheets</li>
-                      <li>Instrument & Safety Devices Datasheets</li>
-                      <li>Process and Interlock Descriptions</li>
-                      <li>Operating Manual</li>
-                      <li>Heat&Material Balance</li>
-                      <li>Equipment & Line List</li>
-                    </ul>
-                  I had also experience in process Simulation through ASPEN HYSYS and in HAZOP activity.
-                  </p>
-                  </div>
-              <div class="job">
-              <svg data-src="src/job.svg" fill="black" id="job"></svg>
-                  <p class="jobYears">November 2018 - Current</p>
-                  <p class="jobSociety">Pharmatech SRL</p>
-                  <p class="jobTitle">Lyophilization Consultant</p>
-                  <p class="jobDescription">SAT and training for Freeze Dryer equipments. <br>Some of my activities were done in:
-                  <ul>
-                    <li>Sweden (Astrazeneca)</li>
-                    <li>France (Sanofi)</li>
-                    <li>UK (Pfizer)</li>
-                  </ul>
-                </p>
-                  </div>
-          </div>
-          <div class="studies" class="section">
-              <div class="job">
-              <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
-                  <p class="jobYears">2016-2018</p>
-                  <p class="jobSociety">Politecnico di Torino</p>
-                  <p class="jobTitle">Laurea magistrale Ingegneria Chimica</p>
-                  <p class="jobDescription">106/110</p>
-                  </div>
-              <div class="job">
-              <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
-                  <p class="jobYears">2013-2016</p>
-                  <p class="jobSociety">Politecnico di Torino</p>
-                  <p class="jobTitle">Laurea triennale Ingegneria Chimica</p>
-                  <p class="jobDescription">103/110</p>
-                  </div>
-            <div class="job">
-              <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
-                  <p class="jobdYears">2008-2013</p>
-                  <p class="jobSociety">Liceo Scientifico Leonardo Leo</p>
-                  </div>
-          </div>
-      </div>
-      </div>
-      <div class="section">
-        <h1 class="sectionTitle">Programming Language Skills</h1>
-        <div id="skills">
-          <div class="container" data-rat="90"><div class="ratingVal"></div><p>HTML</p></div>
-          <div class="container" data-rat="80"><div class="ratingVal"></div><p>CSS</p></div>
-          <div class="container" data-rat="75"><div class="ratingVal"></div><p>Javascript</p></div>
-          <div class="container" data-rat="80"><div class="ratingVal"></div><p>PHP</p></div>
-          <div class="container" data-rat="50"><div class="ratingVal"></div><p>Python</p></div>
-          <div class="container" data-rat="30"><div class="ratingVal"></div><p>C++</p></div>
-          <div class="container" data-rat="40"><div class="ratingVal"></div><p>C#</p></div>
-          <div class="container" data-rat="80"><div class="ratingVal"></div><p>SQL</p></div>
-          <div class="container" data-rat="35"><div class="ratingVal"></div><p>React Native</p></div>
         </div>
-        <h1 class="sectionTitle">Softwares I Know</h1>
-        <div style="text-align:center">
-          <svg data-src="src/photoshop.svg" fill="black" title="photosohp"></svg>
-          <svg data-src="src/illustrator.svg" fill="black" title="illustrator"></svg>
-          <svg data-src="src/premierePro.svg" fill="black" title="premierePro"></svg>
-          <svg data-src="src/blender.svg" fill="black" title="blender"></svg>
-          <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
-          <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
+        <div class="job">
+          <svg data-src="src/job.svg" fill="black" id="job"></svg>
+          <p class="jobYears">November 2018 - Current</p>
+          <p class="jobSociety">Pharmatech SRL</p>
+          <p class="jobTitle">Lyophilization Consultant</p>
+          <p class="jobDescription">SAT and training for Freeze Dryer equipments. <span class="dots"><button
+                onclick="showMore()" class="moreButton">...</button></span>
+            <span><br>Some of my activities were done in:
+              <ul>
+                <li>Sweden (Astrazeneca)</li>
+                <li>France (Sanofi)</li>
+                <li>UK (Pfizer)</li>
+              </ul>
+            </span>
+          </p>
         </div>
+      </div>
+      <div class="studies" class="section">
+        <div class="job">
+          <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
+          <p class="jobYears">2016-2018</p>
+          <p class="jobSociety">Politecnico di Torino</p>
+          <p class="jobTitle">Laurea magistrale Ingegneria Chimica</p>
+          <p class="jobDescription">106/110</p>
+        </div>
+        <div class="job">
+          <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
+          <p class="jobYears">2013-2016</p>
+          <p class="jobSociety">Politecnico di Torino</p>
+          <p class="jobTitle">Laurea triennale Ingegneria Chimica</p>
+          <p class="jobDescription">103/110</p>
+        </div>
+        <div class="job">
+          <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
+          <p class="jobdYears">2008-2013</p>
+          <p class="jobSociety">Liceo Scientifico Leonardo Leo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <h1 class="sectionTitle">Programming Language Skills</h1>
+    <div id="skills">
+      <div class="container" data-rat="90">
+        <div class="ratingVal"></div>
+        <p>HTML</p>
+      </div>
+      <div class="container" data-rat="80">
+        <div class="ratingVal"></div>
+        <p>CSS</p>
+      </div>
+      <div class="container" data-rat="75">
+        <div class="ratingVal"></div>
+        <p>Javascript</p>
+      </div>
+      <div class="container" data-rat="80">
+        <div class="ratingVal"></div>
+        <p>PHP</p>
+      </div>
+      <div class="container" data-rat="50">
+        <div class="ratingVal"></div>
+        <p>Python</p>
+      </div>
+      <div class="container" data-rat="30">
+        <div class="ratingVal"></div>
+        <p>C++</p>
+      </div>
+      <div class="container" data-rat="40">
+        <div class="ratingVal"></div>
+        <p>C#</p>
+      </div>
+      <div class="container" data-rat="80">
+        <div class="ratingVal"></div>
+        <p>SQL</p>
+      </div>
+      <div class="container" data-rat="35">
+        <div class="ratingVal"></div>
+        <p>React Native</p>
+      </div>
+    </div>
+    <h1 class="sectionTitle">Softwares I Know</h1>
+    <div style="text-align:center">
+      <svg data-src="src/photoshop.svg" fill="black" title="photosohp"></svg>
+      <svg data-src="src/illustrator.svg" fill="black" title="illustrator"></svg>
+      <svg data-src="src/premierePro.svg" fill="black" title="premierePro"></svg>
+      <svg data-src="src/blender.svg" fill="black" title="blender"></svg>
+      <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
+      <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
+    </div>
 
-      </div>
-      <div id="music" class="section">
-          <h1 class="sectionTitle">Music Production</h1>
-          <p>Started playing piano at the age of 14, since then I've been in love with music, whether it's listening to it or playing it. <br>
-            I can also strum some chords on guitar as a self-taught! Let's say that I can entertain a bit during beach bonfires! But don't give a microphone if you don't wanna recieve an headache!
-            <br>
-            Since my practice sessions were drastically reduced during university years, I focused more on composing, trying to convey what's in my head in the sounds and
-            here you can find some of my humble compositions. Hope you enjoy them!</p>
-      </div>
-      <footer>Source code on GitHub!</footer>
-  </body>
+  </div>
+  <div id="music" class="section">
+    <h1 class="sectionTitle">Music Production</h1>
+    <p>Started playing piano at the age of 14, since then I've been in love with music, whether it's listening to it or
+      playing it. <br>
+      I can also strum some chords on guitar as a self-taught! Let's say that I can entertain a bit during beach
+      bonfires! But don't give a microphone if you don't wanna recieve an headache!
+      <br>
+      Since my practice sessions were drastically reduced during university years, I focused more on composing, trying
+      to convey what's in my head in the sounds and
+      here you can find some of my humble compositions. Hope you enjoy them!
+    </p>
+  </div>
+  <footer>Source code on GitHub!</footer>
+  <script>
+    const showMore = () => {
+      var dots = document.getElementsByClassName("dots");
+      var moreText = document.getElementsByClassName("more");
+      var btnText = document.getElementsByClassName("moreButton");
+      if (dots.style.display == "none") {
+        dots.style.display = "inline";
+        moreText.style.display = "none";
+        btnText.innerHTML = " ... ";
+      } else {
+        dots.style.display = "none";
+        moreText.style.display = "inline";
+        btnText.innerHTML = " - ";
+      }
+    }
+  </script>
+</body>
+
 </html>
