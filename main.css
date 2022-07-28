@@ -47,7 +47,7 @@ nav a {
   background-position: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 300ms;
-
+  cursor: pointer;
 }
 
 nav a:hover {
@@ -180,8 +180,11 @@ nav a:hover {
   background-size: 0 0.1em;
   background-position: 0% 100%;
   background-repeat: no-repeat;
+  margin-bottom: 0.3em;
 }
-
+a {
+    cursor: pointer;
+}
 
 
 @keyframes fadein {
