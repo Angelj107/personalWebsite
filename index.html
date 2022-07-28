@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Ubuntu"
     />
+    <script type="text/javascript" src="data.json"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
     <script>
@@ -259,9 +260,12 @@
             fill="black"
             title="premierePro"
           ></svg>
-          <svg data-src="src/blender.svg" fill="black" title="blender"></svg>
-          <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
-          <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
+          <a onclick="showSlideshow('blenderSlideshow')">
+            <svg data-src="src/blender.svg" fill="black" title="blender"></svg></a>
+          <a onclick="pageShow('music')">
+            <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
+            <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
+          </a>
         </div>
       </div>
       <div id="music" class="section">
@@ -278,45 +282,13 @@
           in the sounds and here you can find some of my humble compositions.
           Hope you enjoy them!
         </p>
+        <div id="covers"></div>
       </div>
     </div>
     <div class="slideshow-container" id="photoshopSlideshow">
       <a class="closeSlideshow" onclick="closeSlideshow('photoshopSlideshow')"
         >X</a
       >
-      <div class="mySlides1">
-        <img
-          src="src/photoshopSlides/a man made of paper.png"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="mySlides1">
-        <img
-          src="src/photoshopSlides/dispensing fire.png"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="mySlides1">
-        <img
-          src="src/photoshopSlides/Man With Powers.png"
-          style="width: 100%"
-        />
-      </div>
-      <div class="mySlides1">
-        <img
-          src="src/photoshopSlides/The woman who talks to the fish.png"
-          style="height: 100vmin"
-        />
-      </div>
-      <div class="mySlides1">
-        <img
-          src="src/photoshopSlides/WomanOnTheRoad.png"
-          style="height: 100vmin"
-        />
-      </div>
-
       <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
       <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
     </div>
@@ -324,22 +296,17 @@
       <a class="closeSlideshow" onclick="closeSlideshow('illustratorSlideshow')"
         >X</a
       >
-      <div class="mySlides2">
-        <img
-          src="src/illustratorSlides/Angelj Logo.png"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="mySlides2">
-        <img
-          src="src/illustratorSlides/GUFONERO.svg"
-          style="width: 100%"
-        />
-      </div>
       <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
     </div>
+    <div class="slideshow-container" id="blenderSlideshow">
+      <a class="closeSlideshow" onclick="closeSlideshow('blenderSlideshow')"
+        >X</a
+      >
+      <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+    </div>
+
     <footer>Source code on GitHub!</footer>
 
     <script>
@@ -374,18 +341,66 @@
       }
 
       /* Carousel script from here. Credits to @w3schools */
-      let slideIndex = [1, 1]
-      let slideId = ['mySlides1', 'mySlides2']
-      showSlides(1, 0)
-      showSlides(1, 1)
+      let slideIndex = [1, 1,1]
+      let slideId = ['mySlides1', 'mySlides2','mySlides3']
 
-      function plusSlides(n, no) {
-        showSlides((slideIndex[no] += n), no)
+      async function foo() {
+        var obj
+        const res = await fetch('/data.json')
+        obj = await res.json()
+        console.log(obj.data[0])
+        let photoshop = document.getElementById('photoshopSlideshow')
+        let illustrator = document.getElementById('illustratorSlideshow')
+        let blender = document.getElementById('blenderSlideshow')
+        let covers = document.getElementById('covers')
+        obj.data.forEach((el) => {
+          var div = document.createElement('div')
+          if (
+            el.extension === 'jpg' ||
+            el.extension === 'png' ||
+            el.extension === 'svg'
+          ) {
+            div.innerHTML =
+              "<img src='src/" +
+              el.source +
+              '/' +
+              el.fileName +
+              '.' +
+              el.extension +
+              "' style='height: 100vmin'/>"
+          }
+          if(el.extension === 'mp4'){
+            div.innerHTML = "<h2>"+el.title+"</h2><video width='100%' controls><source src='src/" + el.source +
+              '/' +
+              el.fileName +
+              '.' +
+              el.extension +
+              "'</video>"
+          }
+          if (el.source == 'photoshopSlides') {
+            div.className = 'mySlides1'
+            photoshop.appendChild(div)
+          }
+          if (el.source == 'illustratorSlides') {
+            div.className = 'mySlides2'
+            illustrator.appendChild(div)
+          }
+          if (el.source == 'blenderSlides') {
+            div.className = 'mySlides3'
+            blender.appendChild(div)
+          }
+          if (el.source == 'musicVideos') {
+            covers.appendChild(div)
+          }
+        })
+        showSlides(1, 0)
+        showSlides(1, 1)
+        showSlides(1, 2)
       }
-
       function showSlides(n, no) {
         let i
         let x = document.getElementsByClassName(slideId[no])
+        console.log(x[slideIndex[no]])
         if (n > x.length) {
           slideIndex[no] = 1
         }
@@ -397,6 +412,10 @@
         }
         x[slideIndex[no] - 1].style.display = 'block'
       }
+      function plusSlides(n, no) {
+        showSlides((slideIndex[no] += n), no)
+      }
+      foo()
     </script>
   </body>
 </html>

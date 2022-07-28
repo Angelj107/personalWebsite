@@ -378,3 +378,11 @@ img {vertical-align: middle;}
 .mySlides1,.mySlides2{
   background-color: grey;
 }
+#covers{
+  width: 50%;
+  display:flex;
+  flex-wrap: wrap;
+}
+#covers div{
+  width: 50%;
+}
