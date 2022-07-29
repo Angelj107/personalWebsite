@@ -56,7 +56,7 @@
       </div>
       <div class="dropPage">
         <div class="profile">
-          <img src="src/ProfilePicture.png" alt="" />
+          <img src="src/ProfilePicture.jpg" alt="" />
           <p>@AE_RUGGIERO</p>
         </div>
         <div>
@@ -260,7 +260,7 @@
         <a class="navLink" onclick="musicPageShow('covers')">Covers</a>
         <a class="navLink" onclick="musicPageShow('originals')">Originals</a>
       </p>
-      <div class="musicContainer">   
+      <div class="musicContainer">
       <div id="covers" class="musicSection"></div>
       <div id="originals" class="musicSection"></div>
     </div>
@@ -291,9 +291,11 @@
       if (moreText.style.display != 'inline') {
         moreText.style.display = 'inline'
         btnText.innerHTML = ' - '
+        btnText.style.color = 'red'
       } else {
         moreText.style.display = 'none'
         btnText.innerHTML = ' ... '
+        btnText.style.color = 'green'
       }
     }
     var navMargin = document.getElementById('navEl').offsetHeight
