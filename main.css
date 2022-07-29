@@ -385,10 +385,10 @@ img {vertical-align: middle;}
   background-color: grey;
 }
 #covers{
-  width: 50%;
-  display:flex;
-  flex-wrap: wrap;
+  text-align: center;
 }
-#covers div{
+#covers video{
   width: 50%;
+  max-width: 500px;
 }
+

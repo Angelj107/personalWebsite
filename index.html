@@ -31,8 +31,8 @@
       })
     })
     window.addEventListener('DOMContentLoaded', () => {
-      const containers = document.getElementsByClassName('container')
-        ;[...containers].forEach((element) => {
+      const containers = document.getElementsByClassName('container');
+      [...containers].forEach((element) => {
           let rating = element.getAttribute('data-rat')
           element.children[0].style.width = rating + '%'
         })
@@ -256,7 +256,14 @@
         in the sounds and here you can find some of my humble compositions.
         Hope you enjoy them!
       </p>
+      <div>
+      <p class="navMusic">
+        <a class="navLink" onclick="musicPageShow('covers')">Covers</a>
+        <a class="navLink" onclick="musicPageShow('originals')">Originals</a>
+      </p>
       <div id="covers"></div>
+      <div id="originals"></div>
+    </div>
     </div>
   </div>
   <div class="slideshow-container" id="photoshopSlideshow">
@@ -291,12 +298,19 @@
     }
     var navMargin = document.getElementById('navEl').offsetHeight
     var sections = document.getElementsByClassName('section')
+    var musicSections = document.getElementsByClassName('musicSection')
     var home = document.getElementById('pages')
     home.style.marginTop = navMargin + 'px'
     home.style.height = home.offsetHeight - navMargin + 'px'
     document.body.style.height = document.body.offsetHeight - navMargin + 'px'
     const pageShow = (id) => {
-      ;[...sections].forEach((el) => {
+      [...sections].forEach((el) => {
+        el.style.display = 'none'
+      })
+      document.getElementById(id).style.display = 'block'
+    }
+    const musicPageShow = (id) => {
+      [...musicSections].forEach((el) => {
         el.style.display = 'none'
       })
       document.getElementById(id).style.display = 'block'
@@ -316,7 +330,6 @@
       var obj
       const res = await fetch('./data.json')
       obj = await res.json()
-      console.log(obj.data[0])
       let photoshop = document.getElementById('photoshopSlideshow')
       let illustrator = document.getElementById('illustratorSlideshow')
       let blender = document.getElementById('blenderSlideshow')
@@ -330,7 +343,7 @@
         ) {
           var image = document.createElement("img");
           image.src = "src/" + el.source + '/' + el.fileName + '.' + el.extension;
-          if (image.height > image.width) {
+          if (image.style.height > image.style.width) {
             image.style.height = "100%";
           } else {
             image.style.width = "100%";
@@ -368,7 +381,6 @@
     function showSlides(n, no) {
       let i
       let x = document.getElementsByClassName(slideId[no])
-      console.log(x[slideIndex[no]])
       if (n > x.length) {
         slideIndex[no] = 1
       }
