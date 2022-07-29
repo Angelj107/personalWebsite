@@ -346,7 +346,7 @@
 
       async function foo() {
         var obj
-        const res = await fetch('/data.json')
+        const res = await fetch('./data.json')
         obj = await res.json()
         console.log(obj.data[0])
         let photoshop = document.getElementById('photoshopSlideshow')
