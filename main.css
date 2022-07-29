@@ -391,4 +391,20 @@ img {vertical-align: middle;}
   width: 50%;
   max-width: 500px;
 }
-
+.musicContainer{
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  background-color: #00000082
+}
+.navMusic{
+  text-align: center;
+  background-color: #00000082;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  box-shadow: #8b379173 -2px 7px 20px 6px;
+  border-radius: 1em 1em 0 0;
+  margin: 0.5em 0 0 0;
+}
