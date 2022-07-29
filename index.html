@@ -1,421 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AE_Ruggiero</title>
-    <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-    />
-    <script type="text/javascript" src="data.json"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        VANTA.BIRDS({
-          el: '#home',
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color1: 0xcfaa0f,
-          color2: 0xebd9d9,
-          birdSize: 0.6,
-          cohesion: 49.0,
-          quantity: 3.0,
-          backgroundAlpha: 0.0,
-        })
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AE_Ruggiero</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu" />
+  <script type="text/javascript" src="data.json"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      VANTA.BIRDS({
+        el: '#home',
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color1: 0xcfaa0f,
+        color2: 0xebd9d9,
+        birdSize: 0.6,
+        cohesion: 49.0,
+        quantity: 3.0,
+        backgroundAlpha: 0.0,
       })
-      window.addEventListener('DOMContentLoaded', () => {
-        const containers = document.getElementsByClassName('container')
+    })
+    window.addEventListener('DOMContentLoaded', () => {
+      const containers = document.getElementsByClassName('container')
         ;[...containers].forEach((element) => {
           let rating = element.getAttribute('data-rat')
           element.children[0].style.width = rating + '%'
         })
+    })
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js" async></script>
+  <nav id="navEl">
+    <a class="navLink" onclick="pageShow('home')">Home</a>
+    <a class="navLink" onclick="pageShow('bio')">Bio</a>
+    <a class="navLink" onclick="pageShow('cv')">CV</a>
+    <a class="navLink" onclick="pageShow('music')">Music</a>
+  </nav>
+  <div id="pages">
+    <div class="section" id="home">
+      <div class="logo-container">
+        <svg data-src="src/tltwb.svg" fill="black" id="tltwb"></svg>
+        <p class="tltwbText">To let the world be.</p>
+      </div>
+      <div class="dropPage">
+        <div class="profile">
+          <img src="src/ProfilePicture.png" alt="" />
+          <p>@AE_RUGGIERO</p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/ae_ruggiero/">
+                <img src="src/instagram.svg" alt="" width="20" />Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UC735lGZAlaVPLhS4iT3Q1vA/featured">
+                <img src="src/youtube.svg" alt="" width="20" />YouTube</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/aeruggiero/">
+                <img src="src/linkedin.svg" alt="" width="20" />Linkedin</a>
+            </li>
+            <li>
+              <a href="https://github.com/Angelj107">
+                <img src="src/github.svg" alt="" width="20" />GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="bio" class="section">
+      <h1 class="sectionTitle">Biography</h1>
+      <p>
+        Hi! My name is Angelo Emiliano Ruggiero, born and raised in a small
+        city in Apulia, Italy.
+        <br />
+        After completing my studies in High School, I moved to Turin to study
+        Chemical Engineering, where I graduated in 5 years.
+        <br />
+        Then, a small parenthesis in a city near Pescara led me to the
+        beginning of my working life.
+        <br />
+        As for now, I've come back to my hometown, where I'm currently working
+        as a Chemical Engineer, but with a forever growing passion in Computer
+        Science and Music Production.
+        <br />
+        I welcome you to this little site in which I share some of my favorite
+        activities and where you can learn more about myself and my passions.
+      </p>
+    </div>
+    <div id="cv" class="section">
+      <h1 class="sectionTitle">Curriculm Vitae</h1>
+      <p style="text-align: center; color: gold; text-decoration: underline">
+        <a onclick="pageShow('skillsSection')">SKILLS</a>
+      </p>
+      <div class="cvElms">
+        <div class="jobExpriences">
+          <div class="job">
+            <svg data-src="src/job.svg" fill="black" id="job"></svg>
+            <p class="jobYears">January 2019 - October 2019</p>
+            <p class="jobSociety">Pic Solutions</p>
+            <p class="jobTitle">Validation Technician</p>
+            <p class="jobDescription">
+              Validation of various pharmaceutical equipments.
+            </p>
+          </div>
+          <div class="job">
+            <svg data-src="src/job.svg" fill="black" id="job"></svg>
+            <p class="jobYears">October 2019 - Current</p>
+            <p class="jobSociety">Startail SRL</p>
+            <p class="jobTitle">Process Engineer</p>
+            <p class="jobDescription" style="display: inline">
+              Preparation and issuing of technical documents needed for the
+              PDP (Process Design Package) of Polypropylene plants
+            </p>
+            <div class="more jobDescription">
+              , such as:<br />
+              <ul>
+                <li>Process Flow Diagrams (PFD)</li>
+                <li>Process and Instrumentation Diagrams (P&ID)</li>
+                <li>Equipment Data Sheets</li>
+                <li>Instrument & Safety Devices Datasheets</li>
+                <li>Process and Interlock Descriptions</li>
+                <li>Operating Manual</li>
+                <li>Heat&Material Balance</li>
+                <li>Equipment & Line List</li>
+              </ul>
+              <p>
+                I had also experience in process Simulation through ASPEN
+                HYSYS and in HAZOP activity.
+              </p>
+            </div>
+            <button onclick="showMore(0)" class="moreButton">...</button>
+          </div>
+          <div class="job">
+            <svg data-src="src/job.svg" fill="black" id="job"></svg>
+            <p class="jobYears">November 2018 - Current</p>
+            <p class="jobSociety">Pharmatech SRL</p>
+            <p class="jobTitle">Lyophilization Consultant</p>
+            <p class="jobDescription" style="display: inline">
+              SAT and training for Freeze Dryer equipments.
+            </p>
+            <div class="more jobDescription">
+              <br />Some of my activities were done in:
+              <ul>
+                <li>Sweden (Astrazeneca)</li>
+                <li>France (Sanofi)</li>
+                <li>UK (Pfizer)</li>
+              </ul>
+            </div>
+            <button onclick="showMore(1)" class="moreButton">...</button>
+          </div>
+        </div>
+        <div class="studies" class="section">
+          <div class="job">
+            <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
+            <p class="jobYears">2016-2018</p>
+            <p class="jobSociety">Politecnico di Torino</p>
+            <p class="jobTitle">Chemical Engineering Master Degree</p>
+          </div>
+          <div class="job">
+            <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
+            <p class="jobYears">2013-2016</p>
+            <p class="jobSociety">Politecnico di Torino</p>
+            <p class="jobTitle">Chemical Engineering Bachelor Degree</p>
+          </div>
+          <div class="job">
+            <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
+            <p class="jobdYears">2008-2013</p>
+            <p class="jobSociety">Liceo Scientifico Leonardo Leo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="skillsSection">
+      <h1 class="sectionTitle">Programming Language Skills</h1>
+      <div id="skills">
+        <div class="container" data-rat="90">
+          <div class="ratingVal"></div>
+          <p>HTML</p>
+        </div>
+        <div class="container" data-rat="80">
+          <div class="ratingVal"></div>
+          <p>CSS</p>
+        </div>
+        <div class="container" data-rat="75">
+          <div class="ratingVal"></div>
+          <p>Javascript</p>
+        </div>
+        <div class="container" data-rat="80">
+          <div class="ratingVal"></div>
+          <p>PHP</p>
+        </div>
+        <div class="container" data-rat="50">
+          <div class="ratingVal"></div>
+          <p>Python</p>
+        </div>
+        <div class="container" data-rat="30">
+          <div class="ratingVal"></div>
+          <p>C++</p>
+        </div>
+        <div class="container" data-rat="40">
+          <div class="ratingVal"></div>
+          <p>C#</p>
+        </div>
+        <div class="container" data-rat="80">
+          <div class="ratingVal"></div>
+          <p>SQL</p>
+        </div>
+        <div class="container" data-rat="35">
+          <div class="ratingVal"></div>
+          <p>React Native</p>
+        </div>
+      </div>
+      <h1 class="sectionTitle">Softwares I Know</h1>
+      <div style="text-align: center">
+        <a onclick="showSlideshow('photoshopSlideshow')">
+          <svg data-src="src/photoshop.svg" fill="black" title="photosohp"></svg>
+        </a>
+        <a onclick="showSlideshow('illustratorSlideshow')">
+          <svg data-src="src/illustrator.svg" fill="black" title="illustrator"></svg>
+        </a>
+        <svg data-src="src/premierePro.svg" fill="black" title="premierePro"></svg>
+        <a onclick="showSlideshow('blenderSlideshow')">
+          <svg data-src="src/blender.svg" fill="black" title="blender"></svg></a>
+        <a onclick="pageShow('music')">
+          <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
+          <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
+        </a>
+      </div>
+    </div>
+    <div id="music" class="section">
+      <h1 class="sectionTitle">Music Production</h1>
+      <p>
+        Started playing piano at the age of 14, since then I've been in love
+        with music, whether it's listening to it or playing it. <br />
+        I can also strum some chords on guitar as a self-taught! Let's say
+        that I can entertain a bit during beach bonfires! But don't give me a
+        microphone if you don't wanna recieve an headache!
+        <br />
+        Since my practice sessions were drastically reduced during university
+        years, I focused more on composing, trying to convey what's in my head
+        in the sounds and here you can find some of my humble compositions.
+        Hope you enjoy them!
+      </p>
+      <div id="covers"></div>
+    </div>
+  </div>
+  <div class="slideshow-container" id="photoshopSlideshow">
+    <a class="closeSlideshow" onclick="closeSlideshow('photoshopSlideshow')">X</a>
+    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+  </div>
+  <div class="slideshow-container" id="illustratorSlideshow">
+    <a class="closeSlideshow" onclick="closeSlideshow('illustratorSlideshow')">X</a>
+    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  </div>
+  <div class="slideshow-container" id="blenderSlideshow">
+    <a class="closeSlideshow" onclick="closeSlideshow('blenderSlideshow')">X</a>
+    <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+  </div>
+
+  <footer>Source code on GitHub!</footer>
+
+  <script>
+    const showMore = (id) => {
+      var moreText = document.getElementsByClassName('more')[id]
+      var btnText = document.getElementsByClassName('moreButton')[id]
+      if (moreText.style.display != 'inline') {
+        moreText.style.display = 'inline'
+        btnText.innerHTML = ' - '
+      } else {
+        moreText.style.display = 'none'
+        btnText.innerHTML = ' ... '
+      }
+    }
+    var navMargin = document.getElementById('navEl').offsetHeight
+    var sections = document.getElementsByClassName('section')
+    var home = document.getElementById('pages')
+    home.style.marginTop = navMargin + 'px'
+    home.style.height = home.offsetHeight - navMargin + 'px'
+    document.body.style.height = document.body.offsetHeight - navMargin + 'px'
+    const pageShow = (id) => {
+      ;[...sections].forEach((el) => {
+        el.style.display = 'none'
       })
-    </script>
-  </head>
+      document.getElementById(id).style.display = 'block'
+    }
+    const showSlideshow = (id) => {
+      document.getElementById(id).style.display = 'block'
+    }
+    const closeSlideshow = (id) => {
+      document.getElementById(id).style.display = 'none'
+    }
 
-  <body>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
-      async
-    ></script>
-    <nav id="navEl">
-      <a class="navLink" onclick="pageShow('home')">Home</a>
-      <a class="navLink" onclick="pageShow('bio')">Bio</a>
-      <a class="navLink" onclick="pageShow('cv')">CV</a>
-      <a class="navLink" onclick="pageShow('music')">Music</a>
-    </nav>
-    <div id="pages">
-      <div class="section" id="home">
-        <div class="logo-container">
-          <svg data-src="src/tltwb.svg" fill="black" id="tltwb"></svg>
-          <p class="tltwbText">To let the world be.</p>
-        </div>
-        <div class="dropPage">
-          <div class="profile">
-            <img src="src/ProfilePicture.png" alt="" />
-            <p>@AE_RUGGIERO</p>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <a href="https://www.instagram.com/ae_ruggiero/">
-                  <img src="src/instagram.svg" alt="" width="20" />Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UC735lGZAlaVPLhS4iT3Q1vA/featured"
-                >
-                  <img src="src/youtube.svg" alt="" width="20" />You Tube</a
-                >
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/aeruggiero/">
-                  <img src="src/linkedin.svg" alt="" width="20" />Linkedin</a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/Angelj107">
-                  <img src="src/github.svg" alt="" width="20" />GitHub</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="bio" class="section">
-        <h1 class="sectionTitle">Biography</h1>
-        <p>
-          Hi! My name is Angelo Emiliano Ruggiero, born and raised in a small
-          city in Apulia, Italy.
-          <br />
-          After completing my studies in High School, I moved to Turin to study
-          Chemical Engineering, where I graduated in 5 years.
-          <br />
-          Then, a small parenthesis in a city near Pescara led me to the
-          beginning of my working life.
-          <br />
-          As for now, I've come back to my hometown, where I'm currently working
-          as a Chemical Engineer, but with a forever growing passion in Computer
-          Science and Music Production.
-          <br />
-          I welcome you to this little site in which I share some of my favorite
-          activities and where you can learn more about myself and my passions.
-        </p>
-      </div>
-      <div id="cv" class="section">
-        <h1 class="sectionTitle">Curriculm Vitae</h1>
-        <p style="text-align: center; color: gold; text-decoration: underline">
-          <a onclick="pageShow('skillsSection')">SKILLS</a>
-        </p>
-        <div class="cvElms">
-          <div class="jobExpriences">
-            <div class="job">
-              <svg data-src="src/job.svg" fill="black" id="job"></svg>
-              <p class="jobYears">January 2019 - October 2019</p>
-              <p class="jobSociety">Pic Solutions</p>
-              <p class="jobTitle">Validation Technician</p>
-              <p class="jobDescription">
-                Validation of various pharmaceutical equipments.
-              </p>
-            </div>
-            <div class="job">
-              <svg data-src="src/job.svg" fill="black" id="job"></svg>
-              <p class="jobYears">October 2019 - Current</p>
-              <p class="jobSociety">Startail SRL</p>
-              <p class="jobTitle">Process Engineer</p>
-              <p class="jobDescription" style="display: inline">
-                Preparation and issuing of technical documents needed for the
-                PDP (Process Design Package) of Polypropylene plants
-              </p>
-              <div class="more jobDescription">
-                , such as:<br />
-                <ul>
-                  <li>Process Flow Diagrams (PFD)</li>
-                  <li>Process and Instrumentation Diagrams (P&ID)</li>
-                  <li>Equipment Data Sheets</li>
-                  <li>Instrument & Safety Devices Datasheets</li>
-                  <li>Process and Interlock Descriptions</li>
-                  <li>Operating Manual</li>
-                  <li>Heat&Material Balance</li>
-                  <li>Equipment & Line List</li>
-                </ul>
-                <p>
-                  I had also experience in process Simulation through ASPEN
-                  HYSYS and in HAZOP activity.
-                </p>
-              </div>
-              <button onclick="showMore(0)" class="moreButton">...</button>
-            </div>
-            <div class="job">
-              <svg data-src="src/job.svg" fill="black" id="job"></svg>
-              <p class="jobYears">November 2018 - Current</p>
-              <p class="jobSociety">Pharmatech SRL</p>
-              <p class="jobTitle">Lyophilization Consultant</p>
-              <p class="jobDescription" style="display: inline">
-                SAT and training for Freeze Dryer equipments.
-              </p>
-              <div class="more jobDescription">
-                <br />Some of my activities were done in:
-                <ul>
-                  <li>Sweden (Astrazeneca)</li>
-                  <li>France (Sanofi)</li>
-                  <li>UK (Pfizer)</li>
-                </ul>
-              </div>
-              <button onclick="showMore(1)" class="moreButton">...</button>
-            </div>
-          </div>
-          <div class="studies" class="section">
-            <div class="job">
-              <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
-              <p class="jobYears">2016-2018</p>
-              <p class="jobSociety">Politecnico di Torino</p>
-              <p class="jobTitle">Laurea magistrale Ingegneria Chimica</p>
-              <p class="jobDescription">106/110</p>
-            </div>
-            <div class="job">
-              <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
-              <p class="jobYears">2013-2016</p>
-              <p class="jobSociety">Politecnico di Torino</p>
-              <p class="jobTitle">Laurea triennale Ingegneria Chimica</p>
-              <p class="jobDescription">103/110</p>
-            </div>
-            <div class="job">
-              <svg data-src="src/uni.svg" fill="black" id="uni"></svg>
-              <p class="jobdYears">2008-2013</p>
-              <p class="jobSociety">Liceo Scientifico Leonardo Leo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section" id="skillsSection">
-        <h1 class="sectionTitle">Programming Language Skills</h1>
-        <div id="skills">
-          <div class="container" data-rat="90">
-            <div class="ratingVal"></div>
-            <p>HTML</p>
-          </div>
-          <div class="container" data-rat="80">
-            <div class="ratingVal"></div>
-            <p>CSS</p>
-          </div>
-          <div class="container" data-rat="75">
-            <div class="ratingVal"></div>
-            <p>Javascript</p>
-          </div>
-          <div class="container" data-rat="80">
-            <div class="ratingVal"></div>
-            <p>PHP</p>
-          </div>
-          <div class="container" data-rat="50">
-            <div class="ratingVal"></div>
-            <p>Python</p>
-          </div>
-          <div class="container" data-rat="30">
-            <div class="ratingVal"></div>
-            <p>C++</p>
-          </div>
-          <div class="container" data-rat="40">
-            <div class="ratingVal"></div>
-            <p>C#</p>
-          </div>
-          <div class="container" data-rat="80">
-            <div class="ratingVal"></div>
-            <p>SQL</p>
-          </div>
-          <div class="container" data-rat="35">
-            <div class="ratingVal"></div>
-            <p>React Native</p>
-          </div>
-        </div>
-        <h1 class="sectionTitle">Softwares I Know</h1>
-        <div style="text-align: center">
-          <a onclick="showSlideshow('photoshopSlideshow')">
-            <svg
-              data-src="src/photoshop.svg"
-              fill="black"
-              title="photosohp"
-            ></svg>
-          </a>
-          <a onclick="showSlideshow('illustratorSlideshow')">
-            <svg
-              data-src="src/illustrator.svg"
-              fill="black"
-              title="illustrator"
-            ></svg>
-          </a>
-          <svg
-            data-src="src/premierePro.svg"
-            fill="black"
-            title="premierePro"
-          ></svg>
-          <a onclick="showSlideshow('blenderSlideshow')">
-            <svg data-src="src/blender.svg" fill="black" title="blender"></svg></a>
-          <a onclick="pageShow('music')">
-            <svg data-src="src/reaper.svg" fill="black" title="reaper"></svg>
-            <svg data-src="src/flStudio.svg" fill="black" title="flStudio"></svg>
-          </a>
-        </div>
-      </div>
-      <div id="music" class="section">
-        <h1 class="sectionTitle">Music Production</h1>
-        <p>
-          Started playing piano at the age of 14, since then I've been in love
-          with music, whether it's listening to it or playing it. <br />
-          I can also strum some chords on guitar as a self-taught! Let's say
-          that I can entertain a bit during beach bonfires! But don't give me a
-          microphone if you don't wanna recieve an headache!
-          <br />
-          Since my practice sessions were drastically reduced during university
-          years, I focused more on composing, trying to convey what's in my head
-          in the sounds and here you can find some of my humble compositions.
-          Hope you enjoy them!
-        </p>
-        <div id="covers"></div>
-      </div>
-    </div>
-    <div class="slideshow-container" id="photoshopSlideshow">
-      <a class="closeSlideshow" onclick="closeSlideshow('photoshopSlideshow')"
-        >X</a
-      >
-      <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-    </div>
-    <div class="slideshow-container" id="illustratorSlideshow">
-      <a class="closeSlideshow" onclick="closeSlideshow('illustratorSlideshow')"
-        >X</a
-      >
-      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-    </div>
-    <div class="slideshow-container" id="blenderSlideshow">
-      <a class="closeSlideshow" onclick="closeSlideshow('blenderSlideshow')"
-        >X</a
-      >
-      <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-    </div>
+    /* Carousel script from here. Credits to @w3schools */
+    let slideIndex = [1, 1, 1]
+    let slideId = ['mySlides1', 'mySlides2', 'mySlides3']
 
-    <footer>Source code on GitHub!</footer>
-
-    <script>
-      const showMore = (id) => {
-        var moreText = document.getElementsByClassName('more')[id]
-        var btnText = document.getElementsByClassName('moreButton')[id]
-        if (moreText.style.display != 'inline') {
-          moreText.style.display = 'inline'
-          btnText.innerHTML = ' - '
-        } else {
-          moreText.style.display = 'none'
-          btnText.innerHTML = ' ... '
+    async function foo() {
+      var obj
+      const res = await fetch('./data.json')
+      obj = await res.json()
+      console.log(obj.data[0])
+      let photoshop = document.getElementById('photoshopSlideshow')
+      let illustrator = document.getElementById('illustratorSlideshow')
+      let blender = document.getElementById('blenderSlideshow')
+      let covers = document.getElementById('covers')
+      obj.data.forEach((el) => {
+        var div = document.createElement('div')
+        if (
+          el.extension === 'jpg' ||
+          el.extension === 'png' ||
+          el.extension === 'svg'
+        ) {
+          var image = document.createElement("img");
+          image.src = "src/" + el.source + '/' + el.fileName + '.' + el.extension;
+          if (image.height > image.width) {
+            image.style.height = "100%";
+          } else {
+            image.style.width = "100";
+          }
+          div.appendChild(image)
         }
+        if (el.extension === 'mp4') {
+          div.innerHTML = "<h2>" + el.title + "</h2><video width='100%' controls><source src='src/" + el.source +
+            '/' +
+            el.fileName +
+            '.' +
+            el.extension +
+            "'</video>"
+        }
+        if (el.source == 'photoshopSlides') {
+          div.className = 'mySlides1'
+          photoshop.appendChild(div)
+        }
+        if (el.source == 'illustratorSlides') {
+          div.className = 'mySlides2'
+          illustrator.appendChild(div)
+        }
+        if (el.source == 'blenderSlides') {
+          div.className = 'mySlides3'
+          blender.appendChild(div)
+        }
+        if (el.source == 'musicVideos') {
+          covers.appendChild(div)
+        }
+      })
+      showSlides(1, 0)
+      showSlides(1, 1)
+      showSlides(1, 2)
+    }
+    function showSlides(n, no) {
+      let i
+      let x = document.getElementsByClassName(slideId[no])
+      console.log(x[slideIndex[no]])
+      if (n > x.length) {
+        slideIndex[no] = 1
       }
-      var navMargin = document.getElementById('navEl').offsetHeight
-      var sections = document.getElementsByClassName('section')
-      var home = document.getElementById('pages')
-      home.style.marginTop = navMargin + 'px'
-      home.style.height = home.offsetHeight - navMargin + 'px'
-      document.body.style.height = document.body.offsetHeight - navMargin + 'px'
-      const pageShow = (id) => {
-        ;[...sections].forEach((el) => {
-          el.style.display = 'none'
-        })
-        document.getElementById(id).style.display = 'block'
+      if (n < 1) {
+        slideIndex[no] = x.length
       }
-      const showSlideshow = (id) => {
-        document.getElementById(id).style.display = 'block'
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = 'none'
       }
-      const closeSlideshow = (id) => {
-        document.getElementById(id).style.display = 'none'
-      }
+      x[slideIndex[no] - 1].style.display = 'block'
+    }
+    function plusSlides(n, no) {
+      showSlides((slideIndex[no] += n), no)
+    }
+    foo()
+  </script>
+</body>
 
-      /* Carousel script from here. Credits to @w3schools */
-      let slideIndex = [1, 1,1]
-      let slideId = ['mySlides1', 'mySlides2','mySlides3']
-
-      async function foo() {
-        var obj
-        const res = await fetch('./data.json')
-        obj = await res.json()
-        console.log(obj.data[0])
-        let photoshop = document.getElementById('photoshopSlideshow')
-        let illustrator = document.getElementById('illustratorSlideshow')
-        let blender = document.getElementById('blenderSlideshow')
-        let covers = document.getElementById('covers')
-        obj.data.forEach((el) => {
-          var div = document.createElement('div')
-          if (
-            el.extension === 'jpg' ||
-            el.extension === 'png' ||
-            el.extension === 'svg'
-          ) {
-            div.innerHTML =
-              "<img src='src/" +
-              el.source +
-              '/' +
-              el.fileName +
-              '.' +
-              el.extension +
-              "' style='height: 100vmin'/>"
-          }
-          if(el.extension === 'mp4'){
-            div.innerHTML = "<h2>"+el.title+"</h2><video width='100%' controls><source src='src/" + el.source +
-              '/' +
-              el.fileName +
-              '.' +
-              el.extension +
-              "'</video>"
-          }
-          if (el.source == 'photoshopSlides') {
-            div.className = 'mySlides1'
-            photoshop.appendChild(div)
-          }
-          if (el.source == 'illustratorSlides') {
-            div.className = 'mySlides2'
-            illustrator.appendChild(div)
-          }
-          if (el.source == 'blenderSlides') {
-            div.className = 'mySlides3'
-            blender.appendChild(div)
-          }
-          if (el.source == 'musicVideos') {
-            covers.appendChild(div)
-          }
-        })
-        showSlides(1, 0)
-        showSlides(1, 1)
-        showSlides(1, 2)
-      }
-      function showSlides(n, no) {
-        let i
-        let x = document.getElementsByClassName(slideId[no])
-        console.log(x[slideIndex[no]])
-        if (n > x.length) {
-          slideIndex[no] = 1
-        }
-        if (n < 1) {
-          slideIndex[no] = x.length
-        }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = 'none'
-        }
-        x[slideIndex[no] - 1].style.display = 'block'
-      }
-      function plusSlides(n, no) {
-        showSlides((slideIndex[no] += n), no)
-      }
-      foo()
-    </script>
-  </body>
 </html>

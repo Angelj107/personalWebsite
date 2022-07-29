@@ -199,6 +199,7 @@ a {
 .cvElms {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .cvElms svg {
@@ -213,6 +214,7 @@ a {
   background-color: rgba(255, 255, 255, 0.491);
   backdrop-filter: blur(30px) saturate(180%) contrast(60%);
   border-radius: 2em;
+  max-width: 300px;
 }
 
 .jobYears {
