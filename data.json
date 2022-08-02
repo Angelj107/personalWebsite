@@ -1,115 +1,144 @@
- {
-       "data": [
-  { "fileName": "Abstract 1", "extension": "jpg", "source": "blenderSlides" },
-  { "fileName": "Abstract 2", "extension": "jpg", "source": "blenderSlides" },
-  { "fileName": "Abstract 3", "extension": "jpg", "source": "blenderSlides" },
-  { "fileName": "AlienSpace", "extension": "jpg", "source": "blenderSlides" },
-  {
-    "fileName": "Are we the key",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  { "fileName": "Donut", "extension": "jpg", "source": "blenderSlides" },
-  {
-    "fileName": "High Res Bedroom 1",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "High Res Bedroom 2",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "High Res Bedroom 3",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "High Res Bedroom 4",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "title": "An Island of Happiness",
-    "fileName": "Island",
-    "extension": "mp4",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "LowPoly House Dark",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "LowPoly House Light",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  { "fileName": "Piano", "extension": "jpg", "source": "blenderSlides" },
-  { "fileName": "PingPong", "extension": "jpg", "source": "blenderSlides" },
-  {
-    "fileName": "The Dark Side Of The Moon 2",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "The Dark Side Of The Moon 3",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "The Dark Side Of The Moon",
-    "extension": "jpg",
-    "source": "blenderSlides"
-  },
-  {
-    "fileName": "Angelj Logo",
-    "extension": "png",
-    "source": "illustratorSlides"
-  },
-  { "fileName": "GUFONERO", "extension": "svg", "source": "illustratorSlides" },
-  {
-    "title": "Bad Guy Cover",
-    "fileName": "BadGuy",
-    "extension": "mp4",
-    "source": "musicVideos"
-  },
-  {
-    "title": "Dragon Ball Cover",
-    "fileName": "dragonBall",
-    "extension": "mp4",
-    "source": "musicVideos"
-  },
-  {
-    "title": "Celestial Elixir Keyboard Solo Cover",
-    "fileName": "celestialElixirCover",
-    "extension": "mp4",
-    "source": "musicVideos"
-  },
-  {
-    "fileName": "a man made of paper",
-    "extension": "png",
-    "source": "photoshopSlides"
-  },
-  {
-    "fileName": "dispensing fire",
-    "extension": "png",
-    "source": "photoshopSlides"
-  },
-  {
-    "fileName": "Man With Powers",
-    "extension": "png",
-    "source": "photoshopSlides"
-  },
-  {
-    "fileName": "The woman who talks to the fish",
-    "extension": "png",
-    "source": "photoshopSlides"
-  },
-  {
-    "fileName": "WomanOnTheRoad",
-    "extension": "png",
-    "source": "photoshopSlides"
-  }
-]}
+{
+  "data": [
+    { "fileName": "Abstract 1", "extension": "jpg", "source": "blenderSlides" },
+    { "fileName": "Abstract 2", "extension": "jpg", "source": "blenderSlides" },
+    { "fileName": "Abstract 3", "extension": "jpg", "source": "blenderSlides" },
+    { "fileName": "AlienSpace", "extension": "jpg", "source": "blenderSlides" },
+    {
+      "fileName": "Are we the key",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    { "fileName": "Donut", "extension": "jpg", "source": "blenderSlides" },
+    {
+      "fileName": "High Res Bedroom 1",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "High Res Bedroom 2",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "High Res Bedroom 3",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "High Res Bedroom 4",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "title": "An Island of Happiness",
+      "fileName": "Island",
+      "extension": "mp4",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "LowPoly House Dark",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "LowPoly House Light",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    { "fileName": "Piano", "extension": "jpg", "source": "blenderSlides" },
+    { "fileName": "PingPong", "extension": "jpg", "source": "blenderSlides" },
+    {
+      "fileName": "The Dark Side Of The Moon 2",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "The Dark Side Of The Moon 3",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "The Dark Side Of The Moon",
+      "extension": "jpg",
+      "source": "blenderSlides"
+    },
+    {
+      "fileName": "Angelj Logo",
+      "extension": "png",
+      "source": "illustratorSlides"
+    },
+    {
+      "fileName": "GUFONERO",
+      "extension": "svg",
+      "source": "illustratorSlides"
+    },
+    {
+      "title": "Bad Guy Cover",
+      "fileName": "BadGuy",
+      "extension": "mp4",
+      "source": "musicVideos"
+    },
+    {
+      "title": "Dragon Ball Cover",
+      "fileName": "dragonBall",
+      "extension": "mp4",
+      "source": "musicVideos"
+    },
+    {
+      "title": "Celestial Elixir Keyboard Solo Cover",
+      "fileName": "celestialElixirCover",
+      "extension": "mp4",
+      "source": "musicVideos"
+    },
+    {
+      "fileName": "a man made of paper",
+      "extension": "png",
+      "source": "photoshopSlides"
+    },
+    {
+      "fileName": "dispensing fire",
+      "extension": "png",
+      "source": "photoshopSlides"
+    },
+    {
+      "fileName": "Man With Powers",
+      "extension": "png",
+      "source": "photoshopSlides"
+    },
+    {
+      "fileName": "The woman who talks to the fish",
+      "extension": "png",
+      "source": "photoshopSlides"
+    },
+    {
+      "fileName": "WomanOnTheRoad",
+      "extension": "png",
+      "source": "photoshopSlides"
+    },
+    {
+      "title": "To Let The World Be",
+      "fileName": "To Let The World Be",
+      "extension": "mp3",
+      "source": "originalAudio"
+    },
+    {
+      "title": "The old piano of memories",
+      "fileName": "The old piano of memories",
+      "extension": "mp3",
+      "source": "originalAudio"
+    },
+    {
+      "title": "Another time in New York",
+      "fileName": "Another time in New York",
+      "extension": "mp3",
+      "source": "originalAudio"
+    },
+    {
+      "title": "Cretan Princess",
+      "fileName": "Cretan princess",
+      "extension": "mp3",
+      "source": "originalAudio"
+    }
+  ]
+}

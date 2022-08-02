@@ -48,7 +48,12 @@ nav a {
   transition: background-size 300ms;
   cursor: pointer;
 }
-
+nav a:active, nav a.active {
+  animation-name: animate;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 nav a:hover {
   background-size: 100% 0.1em;
 }
