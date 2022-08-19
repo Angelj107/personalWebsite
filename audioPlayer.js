@@ -1,5 +1,7 @@
 import lottieWeb from 'https://cdn.skypack.dev/lottie-web'
-document.querySelector('#originalsLink').addEventListener('click', displayAudio, {once : true})
+document
+  .querySelector('#originalsLink')
+  .addEventListener('click', displayAudio, { once: true })
 export function displayAudio() {
   /** Implementation of the presentation of the audio player */
   const playIconContainer = document.getElementsByClassName('play-icon')
@@ -10,7 +12,7 @@ export function displayAudio() {
   let muteState = Array(playIconContainer.length).fill('unmute')
   const addPlayIcon = () => {
     ;[...playIconContainer].forEach((el) => {
-      let elNumber = el.closest('div').querySelector('audio').dataset.songnumber
+      let elNumber = el.closest('fieldset').querySelector('audio').dataset.songnumber
       var playAnimation = lottieWeb.loadAnimation({
         container: el,
         path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/pause/pause.json',
@@ -25,12 +27,12 @@ export function displayAudio() {
         if (elPlayState === 'play') {
           playAnimation.playSegments([14, 27], true)
           elPlayState = 'pause'
-          el.closest('div').querySelector('audio').play()
+          el.closest('fieldset').querySelector('audio').play()
           updateTime(elPlayState, elNumber)
         } else {
           playAnimation.playSegments([0, 14], true)
           elPlayState = 'play'
-          el.closest('div').querySelector('audio').pause()
+          el.closest('fieldset').querySelector('audio').pause()
         }
       })
     })
@@ -46,16 +48,16 @@ export function displayAudio() {
         autoplay: false,
         name: 'Mute Animation',
       })
-      let elNumber = el.closest('div').querySelector('audio').dataset.songnumber
+      let elNumber = el.closest('fieldset').querySelector('audio').dataset.songnumber
       let elMuteState = muteState[elNumber]
       el.addEventListener('click', () => {
         if (elMuteState === 'unmute') {
           muteAnimation.playSegments([0, 15], true)
-          el.closest('div').querySelector('audio').muted = true
+          el.closest('fieldset').querySelector('audio').muted = true
           elMuteState = 'mute'
         } else {
           muteAnimation.playSegments([15, 25], true)
-          el.closest('div').querySelector('audio').muted = false
+          el.closest('fieldset').querySelector('audio').muted = false
           elMuteState = 'unmute'
         }
       })
@@ -67,22 +69,27 @@ export function displayAudio() {
     var previousTime
     var intervalFunction = setInterval(function () {
       var sliderElement = seekSlider[id]
-      var audioElement = sliderElement.closest('div').querySelector('audio')
+      var audioElement = sliderElement.closest('fieldset').querySelector('audio')
+      displayBufferedAmount(audioElement)
       var currentTime = audioElement.currentTime
+      var playIconContainer = audioElement.closest('fieldset').querySelector('.play-icon')
       var timeElement = sliderElement
-        .closest('div')
+        .closest('fieldset')
         .querySelector('.current-time')
       sliderElement.value = (currentTime / audioElement.duration) * 100
       if (currentTime != previousTime) {
         timeElement.innerHTML = calculateTime(currentTime)
         previousTime = currentTime
       } else {
+        if (currentTime == audioElement.duration) {
+          playIconContainer.click()
+        }
         clearInterval(intervalFunction)
       }
     }, 500)
   }
   const showRangeProgress = (rangeInput, element) => {
-    var seekSliderEl = element.closest('div').querySelector('.seek-slider')
+    var seekSliderEl = element.closest('fieldset').querySelector('.seek-slider')
     if (rangeInput === seekSliderEl)
       element.style.setProperty(
         '--seek-before-width',
@@ -98,10 +105,10 @@ export function displayAudio() {
   const seekSliderEvent = () => {
     ;[...seekSlider].forEach((el) => {
       el.addEventListener('input', (e) => {
-        var audioSrc = el.closest('div').querySelector('audio');
-        el.closest('div').querySelector('.current-time').innerHTML =
+        var audioSrc = el.closest('fieldset').querySelector('audio')
+        el.closest('fieldset').querySelector('.current-time').innerHTML =
           calculateTime((audioSrc.duration * e.target.value) / 100)
-        audioSrc.currentTime =audioSrc.duration*e.target.value/100
+        audioSrc.currentTime = (audioSrc.duration * e.target.value) / 100
         showRangeProgress(e.target, el)
       })
     })
@@ -110,9 +117,10 @@ export function displayAudio() {
   const volumeSliderEvent = () => {
     ;[...volumeSlider].forEach((el) => {
       el.addEventListener('input', (e) => {
-        el.closest('div').querySelector('.volume-output').innerHTML =
+        el.closest('fieldset').querySelector('.volume-output').innerHTML =
           Math.round((e.target.value / e.target.max) * 100) + '%'
-        el.closest('div').querySelector('audio').volume = e.target.value / 100
+        el.closest('fieldset').querySelector('audio').volume =
+          e.target.value / 100
         showRangeProgress(e.target, el)
       })
     })
@@ -130,7 +138,7 @@ export function displayAudio() {
   }
 
   const displayDuration = (element) => {
-    var durationCont = element.closest('div').querySelector('.duration')
+    var durationCont = element.closest('fieldset').querySelector('.duration')
     durationCont.textContent = calculateTime(element.duration)
   }
 
@@ -144,11 +152,13 @@ export function displayAudio() {
       element.buffered.end(element.buffered.length - 1)
     )
     var parent = element.closest('.audio-player-container')
+    var seekSliderEl = parent.querySelector('.seek-slider')
     parent.style.setProperty(
       '--buffered-width',
-      `${(bufferedAmount / seekSlider.max) * 100}%`
+      `${(bufferedAmount / seekSliderEl.max) * 100}%`
     )
   }
+
   ;[...audio].forEach((el) => {
     if (el.readyState > 0) {
       displayDuration(el)

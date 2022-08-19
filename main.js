@@ -89,11 +89,12 @@ async function foo() {
         "'</video>"
     }
     if (el.extension === 'mp3') {
+      div = document.createElement('fieldset')
       div.className = 'audio-player-container'
       div.innerHTML =
-        '<p class = pAudioPlayer>' +
+        '<legend class = pAudioPlayer>' +
         el.title +
-        "</p><audio style='display:none' data-songnumber='" +
+        "</legend><audio style='display:none' data-songnumber='" +
         i +
         "' controls preload='metadata' class='audioPlayerItem' src='src/" +
         el.source +
