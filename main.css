@@ -457,7 +457,7 @@ button.play-icon,button.mute-icon {
   grid-row: 1;
   grid-column-start: 1;
   grid-column-end: 5;
-  max-width: 500px;
+  max-width: 90%;
 }
 .play-icon path, .mute-icon path {
     stroke: #007db5;
