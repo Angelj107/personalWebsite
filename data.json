@@ -126,7 +126,8 @@
       "title": "The old piano of memories",
       "fileName": "The old piano of memories",
       "extension": "mp3",
-      "source": "originalAudio"
+      "source": "originalAudio",
+      "artwork": "TheOldPianoOfMemories.jpg"
     },
     {
       "title": "Another time in New York",

@@ -89,6 +89,9 @@ async function foo() {
         "'</video>"
     }
     if (el.extension === 'mp3') {
+      var artwork = el.hasOwnProperty('artwork')
+        ? "<img src = 'src/" + el.source + '/'  +el.artwork + "'/>"
+        : ''
       div = document.createElement('fieldset')
       div.className = 'audio-player-container'
       div.innerHTML =
@@ -109,7 +112,8 @@ async function foo() {
         "<span class='duration time'>0:00</span>" +
         "<output class='volume-output'>100%</output>" +
         "<input type='range' class='volume-slider' max='100' value='100'>" +
-        "<button class='mute-icon'></button>"
+      "<button class='mute-icon'></button>" +
+        artwork
       i++;
     }
     if (el.source == 'photoshopSlides') {
