@@ -37,7 +37,8 @@ const musicPageShow = (id) => {
   [...musicSections].forEach((el) => {
     el.style.display = 'none'
   })
-  document.getElementById(id).style.display = 'block'
+  if (id == 'originals') document.getElementById(id).style.display = 'flex'
+  else document.getElementById(id).style.display= 'block'
 }
 const showSlideshow = (id) => {
   document.getElementById(id).style.display = 'block'

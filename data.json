@@ -133,13 +133,15 @@
       "title": "Another time in New York",
       "fileName": "Another time in New York",
       "extension": "mp3",
-      "source": "originalAudio"
+      "source": "originalAudio",
+      "artwork": "Another time in New York.jpg"
     },
     {
       "title": "Cretan Princess",
       "fileName": "Cretan princess",
       "extension": "mp3",
-      "source": "originalAudio"
+      "source": "originalAudio",
+      "artwork": "Cretan Princess.jpg"
     }
   ]
 }

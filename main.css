@@ -1,3 +1,8 @@
+:root{
+  --backgroundColor: #0f2234fa;
+  --shadowColor : #8b379173;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +16,7 @@ html {
   font-size: clamp(10px, 100%, 16px);
 }
 body {
-  background-color: #0f2234fa;
+  background-color: var(--backgroundColor);
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -24,7 +29,7 @@ nav {
   justify-content: space-around;
   width: 100%;
   font-size: 1.5rem;
-  box-shadow: #8b379173 -2px 7px 20px 6px;
+  box-shadow: var(--shadowColor) -2px 7px 20px 6px;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   position: fixed ;
@@ -40,8 +45,8 @@ nav a {
   text-transform: uppercase;
   transition: text-decoration-offset 100ms;
   background: linear-gradient(to right,
-      rgba(100, 200, 200, 0),
-      rgba(100, 200, 200, 1));
+      var(--backgroundColor),
+      var(--shadowColor));
   background-size: 0 0.1em;
   background-position: 0% 100%;
   background-repeat: no-repeat;
@@ -403,6 +408,9 @@ img {vertical-align: middle;}
   text-align: center;
   background-color: #00000082
 }
+.musicContainer div{
+  flex-wrap: wrap;
+}
 .navMusic{
   text-align: center;
   background-color: #00000082;
@@ -460,7 +468,7 @@ button.play-icon,button.mute-icon {
   max-width: 90%;
 }
 .play-icon path, .mute-icon path {
-    stroke: #007db5;
+    stroke: var(--shadowColor);
 }
 .time {
     grid-row: 2;
@@ -620,4 +628,24 @@ input[type="range"]::-ms-thumb {
 input[type="range"]:active::-ms-thumb {
     transform: scale(1.2);
     background: #007db5;
+}
+
+/* Per la scrollbar */
+::-webkit-scrollbar{
+width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+   	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, var(--backgroundColor)),
+									   color-stop(0.72, var(--shadowColor)),
+									   color-stop(0.86, var(--shadowColor)));;
 }
